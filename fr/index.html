@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Comlynk — Vos cartes de visite, enfin rangées</title>
+    <meta
+      name="description"
+      content="Photographiez une carte de visite : Comlynk lit le nom, la fonction, le téléphone, l’e-mail et le site, puis garde la photo avec la fiche. Sur l’iPhone, sans compte."
+    />
+
+    <link rel="canonical" href="https://kesprit.github.io/comlynk/fr/" />
+    <link rel="alternate" hreflang="fr" href="https://kesprit.github.io/comlynk/fr/" />
+    <link rel="alternate" hreflang="en" href="https://kesprit.github.io/comlynk/en/" />
+    <link rel="alternate" hreflang="x-default" href="https://kesprit.github.io/comlynk/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:locale:alternate" content="en_GB" />
+    <meta property="og:site_name" content="Comlynk" />
+    <meta property="og:title" content="Comlynk — Vos cartes de visite, enfin rangées" />
+    <meta
+      property="og:description"
+      content="Photographiez une carte : Comlynk lit le nom, la fonction, le téléphone, l’e-mail et le site, puis garde la photo avec la fiche."
+    />
+    <meta property="og:url" content="https://kesprit.github.io/comlynk/fr/" />
+    <meta property="og:image" content="https://kesprit.github.io/comlynk/assets/img/og-fr.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <meta name="theme-color" content="#fdf6f0" />
+    <link rel="icon" href="../favicon.png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@700;800&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/site.css" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Aller au contenu</a>
+
+    <!-- ===================================================================
+         En-tête
+         =================================================================== -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="./" aria-label="Comlynk, accueil">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="14 14 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 36V26a6 6 0 0 1 6-6h10" />
+                <path d="M64 20h10a6 6 0 0 1 6 6v10" />
+                <path d="M80 64v10a6 6 0 0 1-6 6H64" />
+                <path d="M36 80H26a6 6 0 0 1-6-6V64" />
+              </g>
+              <rect x="30" y="37" width="40" height="26" rx="5" fill="#fff" />
+              <path
+                d="M37 46h18M37 54h12"
+                stroke="#ee4b22"
+                stroke-width="3.4"
+                stroke-linecap="round"
+              />
+            </svg>
+          </span>
+          <span>Comlynk</span>
+        </a>
+
+        <nav class="site-nav" aria-label="Principale">
+          <a class="nav-link" href="#scanner">Scanner</a>
+          <a class="nav-link" href="#cartes">Vos cartes</a>
+          <a class="nav-link" href="#confidentialite">Confidentialité</a>
+
+          <p class="lang">
+            <span aria-current="true">FR</span>
+            <span class="sep" aria-hidden="true">·</span>
+            <a href="../en/" hreflang="en" lang="en">EN</a>
+          </p>
+
+          <a class="btn btn--primary btn--small" href="#telecharger">Télécharger</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- =================================================================
+           Héro
+           ================================================================= -->
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="badge">Gratuit sur iPhone · iOS 26</p>
+
+            <h1>Vos cartes de visite,<br />enfin <span class="accent">rangées.</span></h1>
+
+            <p class="hero-lede">
+              Photographiez une carte : Comlynk lit le nom, la fonction, le téléphone, l’e-mail,
+              le site et les réseaux, puis garde la photo de la carte avec la fiche.
+            </p>
+
+            <div class="hero-cta">
+              <button class="btn btn--primary" type="button" data-store disabled>
+                <svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"
+                  />
+                </svg>
+                Télécharger dans l’App Store
+              </button>
+              <p class="cta-note">Aucun compte à créer</p>
+            </div>
+
+            <p class="cta-soon" data-store-soon>Bientôt sur l’App Store</p>
+          </div>
+
+          <div class="hero-media">
+            <img
+              src="../assets/img/hero-scan.png"
+              width="447"
+              height="806"
+              alt="Un iPhone photographie une carte de visite posée sur une table en bois ; Comlynk détecte la carte et affiche « Prêt pour le scan suivant »."
+              fetchpriority="high"
+            />
+            <p class="hero-tip">
+              <strong>Détection auto</strong>
+              <span>Cadrage + recadrage sans y toucher</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================================================
+           Bande de spécifications
+           ================================================================= -->
+      <section class="specs">
+        <div class="container">
+          <ul class="spec-grid">
+            <li>
+              <h3>Scan en série</h3>
+              <p>« Prêt pour le scan suivant. »</p>
+            </li>
+            <li>
+              <h3>Flash, filtres, obturateur</h3>
+              <p>Couleur ou noir et blanc</p>
+            </li>
+            <li>
+              <h3>Adresse sur la carte</h3>
+              <p>Localisée dans Plans</p>
+            </li>
+            <li>
+              <h3>Texte reconnu</h3>
+              <p>Consultable en un tap</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- =================================================================
+           Trois écrans
+           ================================================================= -->
+      <section class="steps" id="scanner">
+        <div class="container">
+          <h2 class="section-title">Trois écrans, c’est tout.</h2>
+          <p class="section-sub">
+            Pas de tableau de bord, pas d’onglets à explorer. On scanne, on vérifie, on retrouve.
+          </p>
+
+          <ol class="step-grid">
+            <li class="step-card">
+              <p class="step-head"><span class="step-num" aria-hidden="true">1</span>Scannez</p>
+              <p>
+                Le bouton appareil photo, en haut à droite. Comlynk repère la carte sur la table
+                et la redresse.
+              </p>
+              <figure class="step-shot">
+                <img
+                  src="../assets/img/step-scan.png"
+                  width="285"
+                  height="445"
+                  alt="Écran de scan : une carte de visite blanche posée sur du bois, détourée par l’application."
+                  loading="lazy"
+                />
+              </figure>
+            </li>
+
+            <li class="step-card">
+              <p class="step-head">
+                <span class="step-num" aria-hidden="true">2</span>Vérifiez la fiche
+              </p>
+              <p>
+                Nom, fonction, téléphone, e-mail, site web, réseau : chaque champ à sa ligne,
+                modifiable.
+              </p>
+              <figure class="step-shot">
+                <img
+                  src="../assets/img/step-record.png"
+                  width="285"
+                  height="462"
+                  alt="Fiche d’un contact : la photo de la carte en haut, puis le nom, la fonction, le téléphone, l’e-mail et le site web."
+                  loading="lazy"
+                />
+              </figure>
+            </li>
+
+            <li class="step-card">
+              <p class="step-head">
+                <span class="step-num" aria-hidden="true">3</span>Retrouvez-la
+              </p>
+              <p>
+                Toutes vos cartes dans une liste simple, avec le nom, la fonction et l’e-mail en
+                aperçu.
+              </p>
+              <figure class="step-shot">
+                <img
+                  src="../assets/img/step-list.png"
+                  width="285"
+                  height="462"
+                  alt="Liste « Cartes de visite » : chaque ligne montre le nom, la fonction et l’e-mail."
+                  loading="lazy"
+                />
+              </figure>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- =================================================================
+           Cartes difficiles + texte reconnu
+           ================================================================= -->
+      <section class="reading">
+        <div class="container reading-grid">
+          <article class="panel panel-dark">
+            <p class="eyebrow">Cartes difficiles</p>
+            <h2>Fond noir, dorure, texte fin.</h2>
+            <p>
+              Les cartes les plus élégantes sont les plus dures à lire. Comlynk les détache du
+              bois de la table, redresse le cadre et récupère le mail, le téléphone et le site
+              malgré la dorure.
+            </p>
+            <div class="panel-shots">
+              <img
+                src="../assets/img/hard-scan.png"
+                width="320"
+                height="537"
+                alt="Scan d’une carte de visite noire à lettres dorées, posée sur une table en bois."
+                loading="lazy"
+              />
+              <img
+                src="../assets/img/hard-record.png"
+                width="332"
+                height="537"
+                alt="La fiche obtenue : nom, téléphone, e-mail et site web extraits de la carte dorée."
+                loading="lazy"
+              />
+            </div>
+          </article>
+
+          <article class="panel panel-light">
+            <h2>Tout ce que l’app a lu,<br />ligne par ligne.</h2>
+            <p>
+              Nom, fonction, téléphone, e-mail, site web — et « Texte reconnu » en bas de fiche
+              pour le reste de la carte.
+            </p>
+            <div class="panel-shots panel-shots--single">
+              <img
+                src="../assets/img/record-full.png"
+                width="364"
+                height="591"
+                alt="Fiche complète avec la photo de la carte, les champs détectés et le lien « Texte reconnu »."
+                loading="lazy"
+              />
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- =================================================================
+           La fiche complète
+           ================================================================= -->
+      <section class="record" id="cartes">
+        <div class="container record-grid">
+          <figure class="record-media">
+            <img
+              src="../assets/img/record-map.png"
+              width="411"
+              height="752"
+              alt="Une fiche affichant la photo d’une carte illustrée, les coordonnées, puis l’adresse épinglée sur un plan."
+              loading="lazy"
+            />
+          </figure>
+
+          <div class="record-copy">
+            <p class="eyebrow">La fiche complète</p>
+            <h2>La carte reste avec<br />les informations.</h2>
+            <p>
+              La photo de la carte est conservée en haut de la fiche — pratique quand le logo vaut
+              mieux qu’un nom. Si la carte porte une adresse, elle apparaît sur un plan, prête pour
+              l’itinéraire.
+            </p>
+
+            <ul class="mini-grid">
+              <li>
+                <h3>Photo de la carte</h3>
+                <p>Gardée en pleine qualité</p>
+              </li>
+              <li>
+                <h3>Adresse dans Plans</h3>
+                <p>Épinglée sous la fiche</p>
+              </li>
+              <li>
+                <h3>Texte reconnu</h3>
+                <p>Tout ce que l’app a lu</p>
+              </li>
+              <li>
+                <h3>Champs modifiables</h3>
+                <p>Une correction, pas une saisie</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================================================
+           Confidentialité
+           ================================================================= -->
+      <section class="privacy" id="confidentialite">
+        <div class="container">
+          <div class="privacy-panel">
+            <div>
+              <p class="eyebrow">Confidentialité</p>
+              <h2>Vos contacts restent<br />sur votre iPhone.</h2>
+              <p>
+                La reconnaissance de texte se fait sur l’appareil. Pas de compte, pas d’envoi de
+                vos cartes, pas de suivi. Vous supprimez l’app, les données partent avec.
+              </p>
+            </div>
+
+            <ul class="chips">
+              <li>Reconnaissance sur l’appareil</li>
+              <li>Fonctionne hors connexion</li>
+              <li>Aucun compte requis</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================================================
+           Appel final
+           ================================================================= -->
+      <section class="final" id="telecharger">
+        <div class="container">
+          <img
+            class="final-icon"
+            src="../assets/img/icon-512.png"
+            width="512"
+            height="512"
+            alt=""
+            loading="lazy"
+          />
+
+          <h2>La prochaine carte,<br />vous ne la perdrez pas.</h2>
+
+          <button class="btn btn--dark" type="button" data-store disabled>
+            <svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true">
+              <path
+                d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"
+              />
+            </svg>
+            Télécharger dans l’App Store
+          </button>
+
+          <p class="final-note" data-store-soon>Bientôt sur l’App Store</p>
+          <p class="final-note">iPhone · iOS 26 ou plus récent</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===================================================================
+         Pied de page
+         =================================================================== -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p class="footer-brand">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="14 14 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 36V26a6 6 0 0 1 6-6h10" />
+                <path d="M64 20h10a6 6 0 0 1 6 6v10" />
+                <path d="M80 64v10a6 6 0 0 1-6 6H64" />
+                <path d="M36 80H26a6 6 0 0 1-6-6V64" />
+              </g>
+              <rect x="30" y="37" width="40" height="26" rx="5" fill="#fff" />
+              <path
+                d="M37 46h18M37 54h12"
+                stroke="#ee4b22"
+                stroke-width="3.4"
+                stroke-linecap="round"
+              />
+            </svg>
+          </span>
+          © 2026 Comlynk
+        </p>
+
+        <nav class="footer-links" aria-label="Pied de page">
+          <a href="confidentialite.html">Confidentialité</a>
+          <a href="conditions.html">Conditions</a>
+          <a href="assistance.html">Assistance</a>
+          <span class="lang">
+            <span aria-current="true">FR</span>
+            <span class="sep" aria-hidden="true">·</span>
+            <a href="../en/" hreflang="en" lang="en">EN</a>
+          </span>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="../assets/js/site.js" defer></script>
+  </body>
+</html>
