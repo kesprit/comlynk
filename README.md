@@ -11,9 +11,8 @@ En ligne : <https://kesprit.github.io/comlynk/>
 ## Ce que c'est
 
 Du HTML et du CSS statiques. Pas de framework, pas d'étape de build, pas de
-dépendance à installer. Le seul JavaScript du site tient en une trentaine de
-lignes et sert à deux choses : rediriger la racine vers la bonne langue, et
-activer les boutons App Store le jour de la publication.
+dépendance à installer. Le seul JavaScript du site tient en quelques lignes
+et sert à rediriger la racine vers la bonne langue.
 
 ## Structure
 
@@ -60,17 +59,30 @@ La racine redirige selon la langue du navigateur et mémorise le dernier choix
 du visiteur (`localStorage`, clé `comlynk-lang`). Le lien `FR · EN` du header et
 du footer permet de basculer à tout moment.
 
-## Le jour de la publication sur l'App Store
+## Lien App Store
 
-Ouvrir `assets/js/site.js` et renseigner l'URL de la fiche App Store :
+Comlynk est en ligne sur l'App Store :
+<https://apps.apple.com/fr/app/comlynk/id6815378106>
 
-```js
-var APP_STORE_URL = "https://apps.apple.com/app/idXXXXXXXXX";
-```
+Le lien est écrit en dur dans les boutons de `fr/index.html` et `en/index.html`
+(héro et appel final). La page anglaise utilise l'URL sans code pays, qu'Apple
+redirige vers le store du visiteur.
 
-C'est la seule ligne à modifier. Les quatre boutons (héro et appel final, dans
-les deux langues) deviennent cliquables et les mentions « Bientôt sur l'App
-Store » disparaissent.
+## Les visuels
+
+Les captures d'écran viennent de l'iPhone, en pleine définition (601 px de large),
+et sont affichées entre 250 et 324 px : elles restent nettes sur écran Retina.
+Le châssis d'iPhone autour du héro et de la fiche avec plan est **dessiné en CSS**
+(`.device`) plutôt que figé dans l'image, pour que tous les pixels servent à l'écran.
+
+Deux captures manquent encore et restent en basse définition, extraites de la
+maquette : `hard-scan.png` et `hard-record.png`, la carte noire à dorure de la
+section « Fond noir, dorure, texte fin. ». À remplacer par des captures iPhone
+au même format que les autres.
+
+Les fiches affichent les coordonnées réelles des personnes dont les cartes ont
+servi aux essais, désormais lisibles. À remplacer par des cartes fictives avant
+toute campagne, ou à flouter.
 
 ## Points à relire
 
@@ -82,5 +94,5 @@ Store » disparaissent.
 
 ## Crédits
 
-Visuels et captures d'écran issus de la maquette du projet. Typographies
+Icône issue du projet iOS, captures d'écran prises sur iPhone. Typographies
 [Inter et Inter Tight](https://rsms.me/inter/), servies par Google Fonts.

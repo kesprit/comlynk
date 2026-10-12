@@ -245,14 +245,6 @@ a.btn--dark:hover {
   box-shadow: 0 10px 24px rgba(15, 13, 12, 0.28);
 }
 
-/* Le bouton App Store tant que l'app n'est pas publiée : même allure,
-   mais inerte. Voir assets/js/site.js pour le basculer en lien. */
-.btn[disabled] {
-  cursor: default;
-  opacity: 0.55;
-  box-shadow: none;
-}
-
 /* Sélecteur de langue --------------------------------------------------- */
 
 .lang {
@@ -318,6 +310,26 @@ a.btn--dark:hover {
   box-shadow: var(--shadow-card);
 }
 
+/* Châssis d'iPhone ------------------------------------------------------ */
+
+/* Les captures sont brutes, sans coque : le boîtier est dessiné ici, ce qui
+   évite de le figer dans l'image et garde les pixels pour l'écran. Les rayons
+   sont en pourcentage (horizontal / vertical) pour rester circulaires quelle
+   que soit la largeur d'affichage. */
+.device {
+  position: relative;
+  padding: 3%;
+  background: linear-gradient(150deg, #2a2523, #0b0a09 42%, #1c1917);
+  border-radius: 15% / 7%;
+  box-shadow: 0 2px 4px rgba(15, 13, 12, 0.18),
+    0 30px 60px rgba(15, 13, 12, 0.22);
+}
+
+.device img {
+  width: 100%;
+  border-radius: 13% / 6%;
+}
+
 /* --------------------------------------------------------------------------
    4. En-tête
    -------------------------------------------------------------------------- */
@@ -367,7 +379,7 @@ a.btn--dark:hover {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.78fr);
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.64fr);
   align-items: center;
   gap: clamp(32px, 4vw, 60px);
 }
@@ -423,23 +435,16 @@ a.btn--dark:hover {
   color: var(--ink-soft);
 }
 
-.cta-soon {
-  margin-top: 12px;
-  font-size: 14px;
-  color: var(--ink-mute);
-}
-
 /* Visuel du héro : le mockup déborde légèrement vers le bas, comme dans
    la maquette, avec l'étiquette « Détection auto » qui mord dessus. */
 .hero-media {
   position: relative;
   justify-self: end;
-  width: min(114%, 420px);
+  width: min(100%, 320px);
 }
 
-.hero-media img {
+.hero-media .device {
   width: 100%;
-  filter: drop-shadow(0 30px 60px rgba(15, 13, 12, 0.18));
 }
 
 .hero-tip {
@@ -673,9 +678,9 @@ a.btn--dark:hover {
   margin: 0;
 }
 
-.record-media img {
-  width: min(100%, 380px);
-  filter: drop-shadow(0 26px 52px rgba(15, 13, 12, 0.16));
+.record-media .device {
+  width: min(100%, 350px);
+  margin-inline: auto;
 }
 
 .record-copy h2 {
@@ -945,7 +950,7 @@ a.btn--dark:hover {
 
   .hero-media {
     justify-self: center;
-    width: min(100%, 360px);
+    width: min(100%, 320px);
   }
 
   .hero-tip {
@@ -998,6 +1003,15 @@ a.btn--dark:hover {
     gap: 16px;
   }
 
+  .header-inner {
+    gap: 16px;
+  }
+
+  .brand {
+    font-size: 20px;
+    gap: 10px;
+  }
+
   .hero {
     padding-top: 36px;
   }
@@ -1007,7 +1021,7 @@ a.btn--dark:hover {
   }
 
   .hero-media {
-    width: min(100%, 300px);
+    width: min(100%, 290px);
   }
 
   .hero-tip {
@@ -1071,6 +1085,12 @@ a.btn--dark:hover {
 @media print {
   body::before,
   .site-header {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .site-header .btn {
     display: none;
   }
 }
