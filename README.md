@@ -70,19 +70,24 @@ redirige vers le store du visiteur.
 
 ## Les visuels
 
-Les captures d'écran viennent de l'iPhone, en pleine définition (601 px de large),
-et sont affichées entre 250 et 324 px : elles restent nettes sur écran Retina.
-Le châssis d'iPhone autour du héro et de la fiche avec plan est **dessiné en CSS**
-(`.device`) plutôt que figé dans l'image, pour que tous les pixels servent à l'écran.
+Toutes les captures sont en 601 px de large et affichées entre 215 et 324 px :
+elles restent nettes sur écran Retina. Le châssis d'iPhone autour du héro et de
+la fiche avec plan est **dessiné en CSS** (`.device`) plutôt que figé dans
+l'image, pour que tous les pixels servent à l'écran.
 
-Deux captures manquent encore et restent en basse définition, extraites de la
-maquette : `hard-scan.png` et `hard-record.png`, la carte noire à dorure de la
-section « Fond noir, dorure, texte fin. ». À remplacer par des captures iPhone
-au même format que les autres.
+**Aucune donnée réelle.** Les personnes, les cartes, les numéros, les domaines
+et l'adresse sont inventés. Les numéros utilisent la plage `06 39 98 xx xx` que
+l'ARCEP réserve à la fiction.
 
-Les fiches affichent les coordonnées réelles des personnes dont les cartes ont
-servi aux essais, désormais lisibles. À remplacer par des cartes fictives avant
-toute campagne, ou à flouter.
+Les écrans d'interface (liste, fiches) sont redessinés à partir des mesures des
+captures d'origine, avec SF Pro. Les deux écrans de scan gardent la photo réelle
+de la table — bois, lumière, interface iOS — et seule la carte y est remplacée,
+projetée en perspective puis rééclairée d'après la luminance de la scène. Pour
+la carte noire, l'emplacement est d'abord rebouché avec du bois prélevé sur la
+marge droite de la photo.
+
+Les scripts qui les produisent ne sont pas versionnés : ils ont servi une fois.
+Pour refaire une image, repartir d'une capture d'iPhone en pleine définition.
 
 ## Points à relire
 
@@ -94,5 +99,6 @@ toute campagne, ou à flouter.
 
 ## Crédits
 
-Icône issue du projet iOS, captures d'écran prises sur iPhone. Typographies
+Icône issue du projet iOS. Captures d'écran reconstruites avec des personnes
+et des cartes fictives. Typographies
 [Inter et Inter Tight](https://rsms.me/inter/), servies par Google Fonts.
