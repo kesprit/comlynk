@@ -34,7 +34,13 @@ et sert à rediriger la racine vers la bonne langue.
 ├── assets/
 │   ├── css/site.css        feuille unique, variables CSS en haut
 │   ├── js/site.js
-│   └── img/                visuels extraits de la maquette
+│   └── img/
+│       ├── fr/             les captures en français
+│       ├── en/             les mêmes en anglais
+│       └── …               icône et images de partage, communes
+├── tools/
+│   ├── visuels.py          génère assets/img/{fr,en}
+│   └── source/scene.jpg    la table, sans carte ni texte
 └── .nojekyll               GitHub Pages sert les fichiers tels quels
 ```
 
@@ -70,24 +76,36 @@ redirige vers le store du visiteur.
 
 ## Les visuels
 
-Toutes les captures sont en 601 px de large et affichées entre 215 et 324 px :
-elles restent nettes sur écran Retina. Le châssis d'iPhone autour du héro et de
-la fiche avec plan est **dessiné en CSS** (`.device`) plutôt que figé dans
-l'image, pour que tous les pixels servent à l'écran.
+Chaque langue a son propre jeu de captures : sur la page anglaise, l'interface
+montrée dans les copies d'écran est en anglais. Les images font 601 px de large
+et sont affichées entre 215 et 324 px, donc nettes sur écran Retina. Le châssis
+d'iPhone du héro et de la fiche avec plan est **dessiné en CSS** (`.device`)
+plutôt que figé dans l'image.
 
-**Aucune donnée réelle.** Les personnes, les cartes, les numéros, les domaines
-et l'adresse sont inventés. Les numéros utilisent la plage `06 39 98 xx xx` que
-l'ARCEP réserve à la fiction.
+**Aucune donnée réelle.** Personnes, cartes, numéros, domaines et adresse sont
+inventés. Les numéros utilisent la plage `06 39 98 xx xx` que l'ARCEP réserve à
+la fiction.
 
-Les écrans d'interface (liste, fiches) sont redessinés à partir des mesures des
-captures d'origine, avec SF Pro. Les deux écrans de scan gardent la photo réelle
-de la table — bois, lumière, interface iOS — et seule la carte y est remplacée,
-projetée en perspective puis rééclairée d'après la luminance de la scène. Pour
-la carte noire, l'emplacement est d'abord rebouché avec du bois prélevé sur la
-marge droite de la photo.
+### Régénérer les captures
 
-Les scripts qui les produisent ne sont pas versionnés : ils ont servi une fois.
-Pour refaire une image, repartir d'une capture d'iPhone en pleine définition.
+```bash
+python3 -m pip install Pillow
+python3 tools/visuels.py
+```
+
+Le script écrit les deux dossiers et les deux images de partage. Tout le texte
+affiché est regroupé dans le dictionnaire `T` en haut du fichier : pour corriger
+une formulation ou ajouter une langue, c'est le seul endroit à toucher.
+
+Deux techniques coexistent. Les écrans d'interface (liste, fiches) sont
+redessinés avec SF Pro à partir des mesures relevées sur les captures
+d'origine. Les écrans de scan partent de `tools/source/scene.jpg` — la photo
+réelle de la table, vidée de sa carte et de ses textes : on y projette une
+carte en perspective, rééclairée d'après la luminance de la scène, puis on
+écrit les textes de l'appareil photo dans la langue voulue.
+
+Le script a besoin des polices de macOS (SF Pro, Didot, Baskerville,
+Avenir Next). Sur un autre système, adapter les chemins en haut du fichier.
 
 ## Points à relire
 
@@ -96,6 +114,10 @@ Pour refaire une image, repartir d'une capture d'iPhone en pleine définition.
   confidentialité à la soumission : faites relire le texte avant.
 - **Le canal d'assistance** pointe vers les issues GitHub de ce dépôt. À
   remplacer par une adresse e-mail si vous préférez.
+- **Les textes anglais de l'interface** dans les captures (« Business cards »,
+  « Recognised text », « Shutter »…) sont une traduction faite pour la page. Si
+  l'application est un jour localisée, aligner le dictionnaire `T` de
+  `tools/visuels.py` sur ses chaînes réelles.
 
 ## Crédits
 
